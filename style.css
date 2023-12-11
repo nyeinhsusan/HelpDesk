@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Homemade+Apple&family=Oswald:wght@500&family=Poppins:wght@200;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+/* custom scrol */
+/* Track */
+
+html::-webkit-scrollbar {
+  background: var(--bg-color);
+  width: 10px;
+}
+/* Handle */
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(35, 34, 34);
+  width: 3px;
+  border-radius: 2px;
+}
+/* global variable */
+
+:root {
+  --bg-color: rgb(244, 244, 249);
+  --text-color: rgb(211, 223, 236);
+  --main-color: rgb(37, 77, 95);
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* position: sticky; */
+  top: 0;
+  padding-top: 20px 100px;
+  transition: 0.5s;
+  /* z-index: 10; */
+  background-color: var(--main-color);
+}
+header a {
+  text-decoration: none;
+}
+.logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.fa-solid {
+  margin-right: 4px;
+}
+
+.navbar {
+  display: flex;
+  column-gap: 5rem;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.navbar a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.5s;
+  background-color: var(--text-color);
+}
+
+.navbar a:hover::after,
+.navbar .active::after {
+  width: 100%;
+}
+
+.btn {
+  background-color: rgb(23, 43, 25);
+  color: var(--text-color);
+  padding: 0.7rem 1.4rem;
+  margin-right: 20px;
+  border-radius: 0.5rem;
+  font-weight: 400;
+}
+
+/* seconde- nav */
+
+.sec-nav {
+  color: black;
+  background-color: rgb(97, 162, 159);
+}
+.sec-content {
+  display: flex;
+  justify-content: start;
+  column-gap: 2rem;
+  padding: 20px;
+  /* position: sticky; */
+  top: 0;
+  /* z-index: 1000; */
+}
+.sec-nav .sec-content li {
+  list-style: none;
+}
+
+.sec-nav .sec-content li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* footer start */
+.footer {
+  background-color: var(--main-color);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer end  */
